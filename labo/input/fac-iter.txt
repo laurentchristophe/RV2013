@@ -1,0 +1,10 @@
+
+(define fac
+        (lambda (n r k)
+          (= n 0 (lambda (n=0)
+                   (if n=0
+                       (k r)
+                       (- n 1 (lambda (n-1)
+                                (* n r (lambda (n*r)
+                                         (fac n-1 n*r k)))))))))
+        (fac 6 1 end))

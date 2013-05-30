@@ -1,0 +1,11 @@
+(input (lambda (in)
+  (eval in (lambda (lib)
+    (define loop (lambda ()
+      (input-float (lambda (x)
+        (lib x (lambda (x')
+          (output-float x' (lambda (_)
+            (= x 0 (lambda (x=0)
+              (if x=0
+                 (end null)
+                 (loop)))))))))))
+      (loop))))))

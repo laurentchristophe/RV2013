@@ -1,0 +1,16 @@
+
+------------------------------
+---- AG (?Float => AF !Float) ----
+------------------------------
+
+(define in (input))
+(define lib (eval in))
+
+(define loop (lambda ()
+  (define x (input-int))
+  (output-int (lib x))
+  (if (= x 0)
+      null
+      (loop))))
+
+(loop)
